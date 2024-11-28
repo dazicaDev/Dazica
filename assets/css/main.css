@@ -990,6 +990,7 @@ section,
   background-color: #f9f9f9;
   padding: 50px 0;
   height: 100vh;
+  margin-bottom: 30px;
   background: linear-gradient(-45deg, #5723ff, #003d6e, #23a6d5, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
