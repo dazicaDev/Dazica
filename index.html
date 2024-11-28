@@ -44,11 +44,11 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Dazica</h1>
-        <span></span>
+        <span>Dazica&nbsp;</span>
+        <h1 class="sitename">Services</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu position-sticky">
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
@@ -59,7 +59,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
 
     </div>
   </header>
@@ -67,43 +67,68 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+<section id="hero" class="hero section" style="background: linear-gradient(to bottom, #ffffff, #3498db); color: white; padding: 100px 0;">
 
-      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <img src="assets/img/hero-img.svg" class="img-fluid animated" alt="">
-        <h1>Welcome to <span>Dazica Service</span></h1>
-        <p>Empowering Businesses with Exceptional Support and Robust Cyber Security Solutions.</p>
-      </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+    <!-- Hero Image -->
+    <img src="assets/img/hero-img.svg" class="img-fluid animated mb-4" alt="Hero Image" style="max-width: 300px; animation: bounceIn 2s ease-in-out;">
+    
+    <!-- Hero Title -->
+    <h1  id="heroTitle" style="color: rgb(41, 41, 41); font-size: 3rem; font-weight: 700; margin-bottom: 15px;">
+      Welcome to <span style="color: #185c89;">Dazica Service</span>
+    </h1>
+    
+    <!-- Hero Subtitle -->
+    <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+      Empowering Businesses with Exceptional Support and Robust Cyber Security Solutions.
+    </p>
 
-    </section><!-- /Hero Section -->
+    <!-- Call to Action -->
+    <div class="mt-4">
+      <a href="#services" class="btn btn-primary btn-lg" style="margin-right: 10px; padding: 12px 30px; border-radius: 50px; font-size: 1rem;">Get Started</a>
+      <a href="#about" class="btn btn-outline-light btn-lg" style="padding: 12px 30px; border-radius: 50px; font-size: 1rem;">Learn More</a>
+    </div>
+  </div>
 
+</section>
 
-        <!-- Featured Services Section -->
-          <div class="row d-flex flex-row justify-content-center">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-a">
-                  <h1>3Xsupport</h1>
-                  <div class="card-back">                    
-                    <a href="https://www.3xsupport.com">Visit Site</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-b">
-                  <h1>Dazica Security</h1>
-                  <div class="card-back">
-                    <a href="#">Visit Site</a>
-                  </div>
-                </div>
-              </div>
-            </div>  
-
+<section class="Departments">
+  <!-- Featured Services Section -->
+  <div class="container py-5">
+      <div class="row text-center mb-4">
+          <div class="col-12">
+              <h2 class="section-title">Our Featured Services</h2>
+              <p class="section-description">Explore some of our best-in-class solutions tailored for your needs.</p>
           </div>
-
+      </div>
+      <div class="row justify-content-center gy-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+              <div class="service-card shadow-sm">
+                  <div class="service-header item-a">
+                      <h3>3Xsupport</h3>
+                  </div>
+                  <div class="service-body">
+                      <p>Enhance your IT infrastructure with our comprehensive support services.</p>
+                      <a href="https://www.3xsupport.com" class="btn btn-primary">Visit Site</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+              <div class="service-card shadow-sm">
+                  <div class="service-header item-b">
+                      <h3>Dazica Security</h3>
+                  </div>
+                  <div class="service-body">
+                      <p>Safeguard your digital presence with top-notch security solutions.</p>
+                      <a href="#" class="btn btn-primary">Visit Site</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about section">

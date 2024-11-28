@@ -297,6 +297,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    right: 37%;
   }
 
   .navmenu ul {
@@ -844,12 +845,20 @@ section,
   margin-bottom: 0;
 }
 
+@media screen {
+  .section-title p{
+    min-width: 50%;
+    font-size: large;
+  }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 50vh;
+  max-height: 100vh;
   position: relative;
   padding: 120px 0 60px 0;
   display: flex;
@@ -928,6 +937,12 @@ section,
   }
 }
 
+@media screen {
+  #hero{
+    height: 85vh;
+  }
+}
+
 @media (max-width: 991px) {
   .hero .animated {
     max-width: 60%;
@@ -966,6 +981,86 @@ section,
   100% {
     transform: translateY(-10px);
   }
+}
+/*--------------------------------------------------------------
+# Departments Section
+--------------------------------------------------------------*/
+.Departments {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-header {
+  background: linear-gradient(to bottom, #3498db, #3498db);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.service-header{
+  color: white;
+}
+.service-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-body p {
+  color: #000000;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1b7292;
 }
 
 /*--------------------------------------------------------------
