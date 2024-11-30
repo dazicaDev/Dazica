@@ -3246,7 +3246,15 @@ section,
 }
 
 .card .cover.item-b {
-  background-image: url("https://img.freepik.com/free-photo/close-up-man-talking-phone_23-2149192121.jpg?t=st=1732534771~exp=1732538371~hmac=d7112ed549d036af15fba9091c5fb235bcf587f6e010860826f4ac70266c4aae&w=1380");
+  /* background-image: url("https://img.freepik.com/free-photo/close-up-man-talking-phone_23-2149192121.jpg?t=st=1732534771~exp=1732538371~hmac=d7112ed549d036af15fba9091c5fb235bcf587f6e010860826f4ac70266c4aae&w=1380"); */
+  background-image: url(../img/D_Security.jpg);
+  background-size: cover;
+}
+
+.card .cover.item-c {
+  /* background-image: url("https://img.freepik.com/free-photo/close-up-man-talking-phone_23-2149192121.jpg?t=st=1732534771~exp=1732538371~hmac=d7112ed549d036af15fba9091c5fb235bcf587f6e010860826f4ac70266c4aae&w=1380"); */
+  background-image: url(../img/D_webD.jpg);
+  background-size: cover;
 }
 
 .card .cover h1 {
