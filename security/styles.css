@@ -1,0 +1,96 @@
+/* General Reset and Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a2e; /* Dark background */
+  color: white;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff69b4; /* Hover effect */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure canvas stays behind content */
+}
+
+/* New Content Section */
+.content-section {
+  position: relative;
+  z-index: 2; /* Content stays above the animation */
+  padding: 30px;
+   text-align: center;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 200px auto; /* Center content with margin from top */
+}
+
+.content-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.content-section p,
+.content-section ul li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content-section h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.content-section ul li {
+  margin-bottom: 10px;
+}

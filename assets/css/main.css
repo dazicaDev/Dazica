@@ -65,6 +65,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  overflow-x: hidden;
 }
 
 a {
@@ -992,9 +993,16 @@ section,
   padding: 50px 0;
   height: 100vh;
   margin-bottom: 30px;
-  background: linear-gradient(-45deg, #5723ff, #003d6e, #23a6d5, #ffffff);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+}
+.logo_3x{
+  vertical-align: middle;
+  width: 50px;
+}
+.tm {
+  font-size: 20px;
+  vertical-align: super;
+  margin-left: 5px;
+  position: relative;
 }
 
 @keyframes gradient {
@@ -2262,6 +2270,24 @@ section,
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
 
+
+.email-link{
+  text-decoration: none;
+  color: white;
+}
+.email-link:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.email-link1{
+  text-decoration: none;
+  color: var(--default-color):
+}
+.email-link1:hover{
+  color: red;
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
@@ -3124,20 +3150,37 @@ section,
 
 .card {
   position: relative;
-  height: 400px;
-  width: 100%;
+  height: 300px;
+  width: 80%;
   margin: 10px 0;
   transition: ease all 2.3s;
   perspective: 1200px;
+  border-radius: 15px 110px 15px 110px;
+  background: linear-gradient(to bottom,  var(--background-color), #3498db);
 }
+
+.card::after {
+  position: relative;
+  height: 300px;
+  width: 80%;
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+  border-radius: 100px 10px 100px 10px;
+  background: linear-gradient(to bottom,  var(--background-color), #3498db);
+}
+
 .card:hover .cover {
   transform: rotateX(0deg) rotateY(-180deg);
+  border-radius: 10px 100px 10px 100px;
 }
 .card:hover .cover:before {
   transform: translateZ(30px);
+  border-radius: 10px 100px 10px 100px;;
 }
 .card:hover .cover:after {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  border-radius: 100px 10px 100px 10px;;
 }
 .card:hover .cover h1 {
   transform: translateZ(100px);
@@ -3157,12 +3200,13 @@ section,
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  border-radius: 10px 100px 10px 100px;
 }
-.card .cover:before {
+.card .cover::before {
   content: "";
   position: absolute;
   border: 5px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px rgb(0, 0, 0);
   top: 20px;
   left: 20px;
   right: 20px;
@@ -3171,8 +3215,9 @@ section,
   transition: ease all 2.3s;
   transform-style: preserve-3d;
   transform: translateZ(0px);
+  border-radius: 10px 100px 10px 100px;
 }
-.card .cover:after {
+.card .cover::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -3181,10 +3226,14 @@ section,
   bottom: 0px;
   z-index: 2;
   transition: ease all 1.3s;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.385);
+  border-radius: 10px 100px 10px 100px;
+  
 }
 .card .cover.item-a {
-  background-image: url("https://img.freepik.com/free-vector/flat-design-customer-support-concept-illustrated_52683-59274.jpg?t=st=1732534690~exp=1732538290~hmac=6853248c937a10d01306803b8b7d6ba12796c2b88180a5c91fcb49651f34625f&w=1380");
+  /* background-image: url("https://img.freepik.com/free-vector/flat-design-customer-support-concept-illustrated_52683-59274.jpg?t=st=1732534690~exp=1732538290~hmac=6853248c937a10d01306803b8b7d6ba12796c2b88180a5c91fcb49651f34625f&w=1380"); */
+  background-image: url(../img/3Xsupport.jpg);
+  background-size: cover;
 }
 
 .card .cover.item-b {
@@ -3200,7 +3249,7 @@ section,
   transform-style: preserve-3d;
   transition: ease all 2.3s;
   z-index: 3;
-  font-size: 3em;
+  font-size: 200%;
   transform: translateZ(0px);
 }
 .card .cover .price {
@@ -3219,14 +3268,17 @@ section,
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #0b0f08;
+  /* background: linear-gradient(to bottom,  #3498db, var(--background-color)); */
   transform-style: preserve-3d;
   transition: ease all 2.3s;
   transform: translateZ(-1px);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 100px 10px 100px 10px;
 }
+
+
 .card .card-back a {
   transform-style: preserve-3d;
   transition: ease transform 2.3s, ease background 0.5s;
@@ -3242,5 +3294,5 @@ section,
 }
 .card .card-back a:hover {
   background-color: white;
-  color: #0b0f08;
+  color: #000000;
 }

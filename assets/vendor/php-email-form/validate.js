@@ -15,7 +15,7 @@
       let thisForm = this;
 
       let action = thisForm.getAttribute('action');
-      let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
+      // let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
         displayError(thisForm, 'The form action property is not set!');
@@ -27,25 +27,25 @@
 
       let formData = new FormData( thisForm );
 
-      if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
-          grecaptcha.ready(function() {
-            try {
-              grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
-              .then(token => {
-                formData.set('recaptcha-response', token);
-                php_email_form_submit(thisForm, action, formData);
-              })
-            } catch(error) {
-              displayError(thisForm, error);
-            }
-          });
-        } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-        }
-      } else {
+      // if ( recaptcha ) {
+      //   if(typeof grecaptcha !== "undefined" ) {
+      //     grecaptcha.ready(function() {
+      //       try {
+      //         grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
+      //         .then(token => {
+      //           formData.set('recaptcha-response', token);
+      //           php_email_form_submit(thisForm, action, formData);
+      //         })
+      //       } catch(error) {
+      //         displayError(thisForm, error);
+      //       }
+      //     });
+      //   } else {
+      //     displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+      //   }
+      // } else {
         php_email_form_submit(thisForm, action, formData);
-      }
+      // }
     });
   });
 
